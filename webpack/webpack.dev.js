@@ -67,7 +67,8 @@ module.exports = {
             loaders.fonts,
             loaders.images,
             loaders.js,
-            loaders.ejs
+            loaders.ejs,
+            loaders.mov
 		]
     },
 

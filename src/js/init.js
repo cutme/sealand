@@ -15,11 +15,16 @@ document.addEventListener('DOMContentLoaded',function() {
         
         setTimeout(function() {
             cover.remove();
-        }, 250);
+        }, 300);
 
         
         // Anims on inview
-        window.animsInit()   
+        window.animsInit()  
+        
+        
+        // Home video
+        
+        document.getElementById('video') ? window.homeVideo() : false; 
  
     };
     

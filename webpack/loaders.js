@@ -106,6 +106,18 @@ const js = {
 };
 
 
+const mov = {
+	test: /\.mov$/,
+	use: [
+	    {
+		    loader: 'file-loader',
+			options: {
+			    name: '[name].[ext]',
+			    useRelativePath: true
+			}
+        }
+	]
+}
 
 module.exports = {
     ejs: ejs,
@@ -113,6 +125,7 @@ module.exports = {
     images: images,
     js: js,
     css: css,
-    scss: scss
+    scss: scss,
+    mov: mov
 };
 

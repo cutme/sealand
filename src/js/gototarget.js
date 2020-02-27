@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function() {
     	let base_speed  = 60,
     		page_offset = window.pageYOffset || document.documentElement.scrollTop,
         	offset_diff = Math.abs(target - page_offset),
-        	speed = ((offset_diff * base_speed) / 1000)/160;
+        	speed = ((offset_diff * base_speed) / 1000)/140;
 
     	return speed;
 	};
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded',function() {
 	        let offset = that.getAttribute('data-offset');
 
             if (!offset) {
-                offset = 70;
+                offset = 60;
             }
             
             document.body.removeAttribute('style');
