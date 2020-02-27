@@ -1,0 +1,31 @@
+.c-nav {
+    margin: 0 0 0 auto;
+    
+    ul {
+        @extend %flex;
+        @extend %flex-y;
+    }
+    
+    li {
+        padding: 0 25px;
+        border-right: 1px solid $c-gray-01;
+    }
+    
+    a {
+        @extend %flex;
+        @extend %flex-y;
+        height: 40px;
+        text-transform: uppercase;
+        font: {
+            family: $gomme;
+            size: rem(16);
+        }
+        color: white;
+        
+        &:hover {
+            .desktop & {
+                color: $c-primary;
+            }
+        }
+    }
+}

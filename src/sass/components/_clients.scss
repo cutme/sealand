@@ -1,0 +1,19 @@
+.c-clients {
+    padding: 0 40px;
+
+    &__image {
+        @extend %rel;
+        
+        &:after {
+            @extend %abs-pseudo;
+            left: 0; top: 50%; z-index: -1;
+            width: 100%;
+            height: 50%;
+            background-color: $c-gray-03;;
+        }
+                
+        img {
+            margin: 0 auto -10px auto;
+        }
+    }   
+}

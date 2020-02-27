@@ -1,0 +1,48 @@
+.c-footer {
+    background: {
+        image: url(../img/assets/pattern.png);
+        position: center bottom;
+        size: cover;
+        color: $c-black-01;
+    }
+    padding: 80px 0 120px;
+    
+    p {
+        line-height: 25px;
+        font-size: rem(14);
+        color: $c-gray-02;
+    }
+    
+    &__address {
+        @extend %flex;
+        
+        [class^="icon-"] {
+            margin-right: 20px;
+            font-size: rem(40);
+            color: $c-primary;
+        }
+    }
+    
+    .o-cols {
+        
+        &__item {
+            width: calc(100% / 4);
+        
+            &:last-of-type {
+               text-align: right;
+            }
+        }
+    }
+    
+    .o-logo {
+        width: 145px; height: 45px;
+    }
+    
+    a {
+        &:hover {
+            .desktop & {
+                color: $c-primary;
+            }
+        }
+    }
+}

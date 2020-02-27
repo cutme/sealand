@@ -1,0 +1,25 @@
+.c-homevideo {
+    height: 100vh;
+    background: {
+        image: url(../img/top/home.jpg);
+        size: cover;
+        position: center;
+    }
+    
+    .o-wrap {
+        @extend %abs;
+        @extend %abs-x;
+        @extend %flex;
+        @extend %flex-y;
+        height: 100%;
+    }
+    
+    .icon-arrow-down {
+        @extend %abs;
+        @extend %abs-x;
+        bottom: 40px;
+        line-height: 1;
+        font-size: rem(50);
+        color: $c-gray-02;
+    }
+}

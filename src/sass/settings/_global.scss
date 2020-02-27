@@ -1,0 +1,50 @@
+// Fonts
+
+$gomme:             'GommeSansW04', serif;
+$verdana:           'Verdana', sans-serif;
+$icomoon:           'icomoon';
+$text:		        $verdana;
+
+
+
+
+// Font weights
+
+$extralight:        200;
+$light:             300;
+$regular:           400;
+$medium:            500;
+$semibold:          600;
+$bold:              700;
+$extrabold:         800;
+
+
+$z-index: (
+    hamburger:      100,
+    header:         30,
+	top           : 40,
+	nav           : 50,
+	logo          : 60
+);
+
+// Paths
+
+$path_img:          '../img';
+$path_fonts:        '../fonts';
+
+
+
+// Default
+
+$base-font-size:	18;
+$base:				1240;
+
+
+
+// RWD
+
+$desktop:              1920;
+$tablet:               1023;
+$tablet_portrait:       768;
+$smartphone:			640;
+$smartphone_portrait:	500;

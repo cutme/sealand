@@ -1,0 +1,43 @@
+.c-services {
+   
+    &__title {
+        @extend %flex;
+        
+        .icon {
+            width: 75px;
+            height: 75px;
+            margin-right: 20px;
+            color: $c-primary;
+        }
+        
+        .name {
+            @extend %lead;
+            @extend %lead--2;
+        }
+    }
+    
+    
+    .o-cols {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $c-gray-01;
+        }
+        
+        &__item {
+            &:nth-of-type(1) {
+                width: 420px;
+            }
+            
+            &:nth-of-type(2) {
+                width: 640px;
+                padding-right: 125px;
+            }
+            
+            &:nth-of-type(3) {
+                width: 190px;
+            }
+        }
+    }
+}

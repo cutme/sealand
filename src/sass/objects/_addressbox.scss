@@ -1,0 +1,39 @@
+.o-addressbox {
+    @extend %flex;
+    
+    a {
+        &:hover {
+            .desktop & {
+                color: $c-primary;
+            }
+        }
+    }
+    
+    [class^="icon-"] {
+        font-size: rem(60);
+        color: $c-primary;
+    }
+    
+    dt {
+        width: 105px;
+        padding-left: 10px;
+    }
+    
+    dd {
+        flex: 1;
+        color: $c-gray-04;        
+        font-family: $gomme;
+    }
+    
+    .lead {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $c-gray-01;
+    }
+    
+    .name {
+        font-size: rem(24);
+    }
+    
+    
+}

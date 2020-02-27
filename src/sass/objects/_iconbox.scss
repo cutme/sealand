@@ -1,0 +1,26 @@
+.o-iconbox {
+    
+    @extend %flex;
+    
+    dt {
+        width: 85px;
+        margin-right: 20px;
+        padding-top: 8px;
+        
+        img {
+            margin: 0 auto;
+        }
+    }
+    
+    dd {
+        flex: 1;
+    }
+    
+    
+    &:not(:last-of-type) {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $c-gray-01;
+    }
+    
+}

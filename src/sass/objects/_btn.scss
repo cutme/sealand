@@ -1,0 +1,39 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    min-width: 295px;
+    height: 60px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: $text;
+    color: $c-gray-04;
+    cursor: pointer;
+    border: 1px solid $c-black-02;
+    border-radius: 10px;
+    
+    &--minor {
+        min-width: 190px;
+        height: 40px;
+        font-size: rem(14);
+    }
+}
+
+a.o-btn,
+button.o-btn {
+    
+    &:hover {
+        .desktop & {
+        	background-color: $c-black-02;
+        	color: white;
+        }
+    }
+}
+
+
+button.o-btn {
+    span {
+        width: 100%;
+	}
+}

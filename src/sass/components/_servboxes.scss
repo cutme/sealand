@@ -1,0 +1,61 @@
+.c-servboxes {
+    
+    .o-box {
+        @extend %rel;
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+        
+        &__title {
+            @extend %abs;
+            @extend %flex;
+            left: 0; top: 0;
+            width: 100%;
+            padding: 40px;
+            color: white;
+        }
+        
+        [class^="icon-"] {
+            margin-right: 15px;
+            line-height: 1;
+            font-size: rem(60);
+        }
+        
+        &:after {
+            @extend %abs-pseudo;
+            @extend %anim;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            background-blend-mode: luminosity;
+            opacity: 0;
+        }
+        
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+        
+        img {
+            @extend %rel; z-index: -1;
+        }
+    }
+    
+    .o-cols {
+        @extend %flex-spacebetween;
+        
+        &__item {
+            width: grid(295);
+        
+                .o-box {
+                    &:after {
+                        background: var(--background), 
+                                    linear-gradient(to bottom, rgba(255,123,0,1) 0%, rgba(45,45,45,1) 100%);
+                    }
+                }
+        }
+    }
+
+}

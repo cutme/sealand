@@ -1,0 +1,15 @@
+$c-black-01:   #101010;
+$c-black-02:   #2d2d2d;
+
+$c-orange-01:  #ff7d00;
+
+$c-gray-01:    #c0c0c0;
+$c-gray-02:    #a0a0a0;
+$c-gray-03:    #f0f0f0;
+$c-gray-04:    #606060;
+
+$c-primary: $c-orange-01;
+
+:root {
+  --primary-color: #{$c-orange-01};
+}

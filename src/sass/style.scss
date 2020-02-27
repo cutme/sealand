@@ -1,0 +1,58 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/clear';
+@import 'tools/functions';
+@import 'tools/mixins';
+//@import 'tools/blazy';
+//@import 'tools/custom-select';
+//@import 'tools/glide';
+//@import 'tools/glightbox';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+@import 'generic/screen-reader';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/addressbox';
+@import 'objects/article';
+@import 'objects/btn';
+@import 'objects/cols';
+@import 'objects/header';
+@import 'objects/hamburger';
+@import 'objects/header';
+@import 'objects/icons';
+@import 'objects/iconbox';
+@import 'objects/leads';
+@import 'objects/logo';
+@import 'objects/section';
+@import 'objects/title';
+@import 'objects/wrap';
+
+@import 'components/clients';
+@import 'components/certificates';
+@import 'components/contact';
+@import 'components/cooperation';
+@import 'components/footer';
+@import 'components/history';
+@import 'components/homevideo';
+@import 'components/map';
+@import 'components/methods';
+@import 'components/more';
+@import 'components/nav';
+@import 'components/quality';
+@import 'components/servboxes';
+@import 'components/service';
+@import 'components/services';
+@import 'components/standout';
+@import 'components/top';
+@import 'components/topimage';
+
+@import 'trumps/splitting';
+@import 'trumps/trumps';

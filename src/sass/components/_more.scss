@@ -1,0 +1,14 @@
+.c-more {
+    .o-cols {
+        &__item {
+            &:first-of-type {
+                padding: 0;
+            }
+
+            &:last-of-type {
+                padding-right: grid(105);
+                text-align: right;
+            }
+        }
+    }
+}

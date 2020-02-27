@@ -1,0 +1,13 @@
+.o-header {
+    &--shape {
+        @extend %flex;
+        @extend %flex-y;
+        height: 90px;
+        background: {
+            image: url(../img/assets/shape.svg);
+            repeat: no-repeat;
+            position: center bottom;
+        }
+        margin-bottom: 60px;
+    }
+}
