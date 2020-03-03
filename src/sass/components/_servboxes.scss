@@ -6,7 +6,6 @@
         width: 100%;
         height: 100%;
         
-        
         &__title {
             @extend %abs;
             @extend %flex;
@@ -48,6 +47,14 @@
         
         &__item {
             width: grid(295);
+            
+            .o-box {
+                &:after {
+                    background-color: $c-primary;
+                }
+            }
+            
+/*
         
                 .o-box {
                     &:after {
@@ -91,6 +98,7 @@
                     }
                 }
             }
+*/
         }
     }
 

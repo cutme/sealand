@@ -30,7 +30,7 @@
             
             &:before {
                 @extend %abs-pseudo;
-
+                @extend %anim;
                 text-align: center;
                 left: 0;
                 width: 105px;
@@ -40,6 +40,16 @@
                 }
                 color: $c-primary;
                 content: "\e901";
+            }
+            
+            &:hover {
+                &:before {
+                    .desktop & {
+                        
+                        transform: translate3d(10px, 0, 0);
+                        
+                    }
+                }
             }
             
             h4 {

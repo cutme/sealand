@@ -1,7 +1,24 @@
 html:not(.ie) {
-     .is-loaded {
+    
+    .anim {
+        opacity: 0;
+        
+            &--left {
+                transform: translate3d(-50px, 0, 0);
+            }
+            
+            &--right {
+                transform: translate3d(50px, 0, 0);
+            }
+            
+            &--up {
+                transform: translate3d(0, 50px, 0);
+            }
+    }
+    
+    .is-loaded {
         .anim {
-       
+            
             &--delay1 {
                 transition-delay: 150ms;
             }
@@ -17,30 +34,17 @@ html:not(.ie) {
             &--delay4 {
                 transition-delay: 450ms;
             }
-    
+            
+            &--delay5 {
+                transition-delay: 500ms;
+            }
+            
             transition: all 600ms ease-out;
-            opacity: 0;
+
             
-            
-            
-            &--left {
-                transform: translate3d(-50px, 0, 0);
-            }
-            
-            &--right {
-                transform: translate3d(50px, 0, 0);
-            }
-            
-            &--scale {
-                transform: scale3d(0, 1, 1);
-            }
-            
-            &--up {
-                transform: translate3d(0, 50px, 0);
-            }
             
             &--visible {
-                transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                transform: translate3d(0, 0, 0);
                 opacity: 1;
             }
         }

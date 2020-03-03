@@ -1,5 +1,6 @@
 const { detect } = require('detect-browser');
 const browser = detect();
+import Blazy from 'blazy';
 
 document.addEventListener('DOMContentLoaded',function() {
 
@@ -25,6 +26,20 @@ document.addEventListener('DOMContentLoaded',function() {
         // Home video
         
         document.getElementById('video') ? window.homeVideo() : false; 
+        
+        
+         // Blazy
+        
+        window.bLazy = new Blazy({
+            success: function(el){
+
+/*
+                let item = el.parentNode.parentNode.parentNode.parentNode;
+                
+                item.classList.add('is-visible');
+*/
+            }
+        });
  
     };
     

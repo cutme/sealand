@@ -1,3 +1,18 @@
 .c-methods {
     padding: 0 40px 40px 40px;
+    
+    .o-iconbox {
+        
+        .icon {
+            @extend %anim;
+        }
+        
+        &:hover {
+            .desktop & {
+                .icon {
+                    transform: translate3d(10px, 0, 0);
+                }
+            }
+        }
+    }
 }

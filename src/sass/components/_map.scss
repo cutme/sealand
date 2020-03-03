@@ -12,11 +12,15 @@
 }
 
 .c-map {
-    @extend %rel;
-    height: 690px;
-        
+    padding: 0 40px 40px 40px;
 
-    &.is-loading {
-        animation: pulse 1s infinite;
+    &__area {
+        @extend %rel;
+        height: 690px;
+            
+    
+        &.is-loading {
+            animation: pulse 1s infinite;
+        }
     }
 }

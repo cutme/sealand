@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded',function() {
             });
         }
         
+/*
         
         for (let j = 0; j < split.length; j++) {
 
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 }
             });
         }
+*/
     };
 
 }, false);
