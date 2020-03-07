@@ -1,3 +1,9 @@
 .c-service {
-   
+   .o-iconbox {
+        align-items: end;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	text-align: left;
+        }
+   }
 }
