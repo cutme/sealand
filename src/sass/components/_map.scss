@@ -12,12 +12,21 @@
 }
 
 .c-map {
+/*
     padding: 0 40px 40px 40px;
+    
+    @media ( max-width: $tablet + px ) {
+    	padding: 0 20px 20px 20px;
+    }
+*/
 
     &__area {
         @extend %rel;
         height: 690px;
             
+        @media ( max-width: $smartphone_portrait + px ) {
+        	height: 400px;
+        }
     
         &.is-loading {
             animation: pulse 1s infinite;

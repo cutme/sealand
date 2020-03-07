@@ -1,4 +1,16 @@
 .c-contact {
     
+    .o-iconbox {
+        align-items: end;
+    }
     
+    .o-cols {
+        &__item {
+            &:last-of-type {
+                @media ( max-width: $smartphone_portrait + px ) {
+                	margin-bottom: 30px;
+                }
+            }
+        }
+    }
 }

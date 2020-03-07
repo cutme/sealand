@@ -1,5 +1,13 @@
 .c-clients {
     padding: 0 40px;
+    
+    @media ( max-width: $tablet + px ) {
+    	padding: 0 20px;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	padding: 0 10px;
+    }
 
     &__image {
         @extend %rel;

@@ -5,19 +5,12 @@ const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 document.addEventListener('DOMContentLoaded',function() {
 
     const el = document.getElementsByClassName('js-nav')[0],
-          nav = document.getElementsByClassName('js-children'),
           menu = document.getElementsByClassName('js-menu')[0],
-          hamburger = document.getElementsByClassName('js-hamburger')[0],
-          parent = el.getElementsByTagName('li');
+          hamburger = document.getElementsByClassName('js-hamburger')[0];
 
     const init = function() {
 
         let ww = 0;
-        
-/*
-        const searchform = document.getElementById('searchform'),
-        	  searchform__content = document.getElementById('searchform__content');
-*/
 
         const checkWindowWidth = function() {
             ww = window.innerWidth;
@@ -33,19 +26,6 @@ document.addEventListener('DOMContentLoaded',function() {
             enableBodyScroll(el);
             el.classList.remove('is-visible');
             hamburger.classList.remove('is-active');
-
-            for (let i = 0; i < nav.length; i ++) {
-                nav[i].classList.remove('is-active');
-            }
-            
-            //cutme.Helpers.detach(searchform__content, searchform);
-            //searchform__content.classList.remove('is-visible');
-            
-            let parent = el.getElementsByClassName('menu-item-has-children');
-            
-            for (let i = 0; i < parent.length; i ++) {
-                parent[i].classList.remove('is-active');
-            }
         };
 
         const showMenu = function(e) {
@@ -59,14 +39,6 @@ document.addEventListener('DOMContentLoaded',function() {
                 disableBodyScroll(el);
                 el.classList.add('is-visible');
                 hamburger.classList.add('is-active');
-                
-                //cutme.Helpers.detach(searchform__content, el);
-                
-               /*
- setTimeout(function() {
-	                searchform__content.classList.add('is-visible');
-                }, 100);
-*/
             }
         };
 
@@ -79,7 +51,6 @@ document.addEventListener('DOMContentLoaded',function() {
         hamburger.addEventListener('click', showMenu);
 
 
-        const parent = menu.getElementsByTagName('li');
 
         const submenu = function(e) {
         
@@ -104,10 +75,6 @@ document.addEventListener('DOMContentLoaded',function() {
             }
         }
 
-
-        for (let j = 0; j < parent.length; j++) {
-            parent[j].addEventListener('click', submenu);
-        }
 
 
         // Hide menu on ESC

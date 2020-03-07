@@ -1,4 +1,9 @@
+/*
 .c-quality {
-   padding: 0 40px 40px 40px;
+    padding: 0 40px 40px 40px;
    
+    @media ( max-width: $tablet + px ) {
+        padding: 0 20px 20px 20px;
+    }
 }
+*/

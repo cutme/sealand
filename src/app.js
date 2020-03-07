@@ -8,8 +8,9 @@ require('./js/inview.js');
 require('./js/fixel.js');
 require('./js/gototarget.js');
 require('./js/map.js');
+require('./js/nav.js');
 //require('./js/splitting.js');
 require('./js/homevideo.js');
 
-//require('./js/nav.js');
+//
 //require('./js/mobile-detach.js');

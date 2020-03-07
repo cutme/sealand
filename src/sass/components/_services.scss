@@ -2,17 +2,30 @@
    
     &__title {
         @extend %flex;
+        align-items: end;
         
         .icon {
             width: 75px;
             height: 75px;
             margin-right: 20px;
             color: $c-primary;
+            
+            @media ( max-width: $base + px ) {
+            	width: base(75);
+            }
+            
+            @media ( max-width: $tablet + px ) {
+            	width: 60px;
+            }
         }
-        
+
         .name {
             @extend %lead;
             @extend %lead--2;
+            
+            @media ( max-width: $tablet + px ) {
+            	
+            }
         }
     }
     
@@ -21,22 +34,58 @@
         padding-bottom: 40px;
         margin-bottom: 40px;
         
+        @media ( max-width: $tablet + px ) {
+            flex-wrap: wrap;
+        }
+        
         &:not(:last-of-type) {
             border-bottom: 1px solid $c-gray-01;
         }
         
         &__item {
             &:nth-of-type(1) {
-                width: 420px;
+                width: grid(420);
+                
+                @media ( max-width: $tablet + px ) {
+                    width: 250px;
+                    flex-shrink: 0;
+                }
+                
+                @media ( max-width: $smartphone_portrait + px ) {
+                	width: 100%;
+                }
             }
             
             &:nth-of-type(2) {
-                width: 640px;
+                width: grid(640);
                 padding-right: 125px;
+                
+                @media ( max-width: $base + px ) {
+                	padding-right: base(125);
+                }
+                
+                @media ( max-width: $tablet + px ) {
+                    flex: 1;
+                    width: auto;
+                    margin-bottom: 20px;
+                	padding-right: 0;
+                }
+                
+                @media ( max-width: $smartphone_portrait + px ) {
+                	width: 100%;
+                }
             }
             
             &:nth-of-type(3) {
                 width: 190px;
+                
+                @media ( max-width: $tablet + px ) {
+                    width: 100%;
+                }
+                
+                @media ( max-width: $smartphone_portrait + px ) {
+                	width: 100%;
+                }
             }
         }
     }

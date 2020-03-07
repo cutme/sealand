@@ -1,5 +1,11 @@
-/*
 .c-standout {
-   
+   .o-cols {
+       .o-lead {
+           &--2 {
+               @media ( max-width: $tablet + px ) {
+                	font-size: rem(20);
+                }
+           }
+       }
+   }
 }
-*/

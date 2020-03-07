@@ -8,4 +8,24 @@
 	 height: 120px;
 	 background-color: $c-black-01;
 	 padding: 0 50px 0 80px;
+	 
+	 @media ( max-width: $desktop + px ) {
+        padding-left: 40px;
+	 }
+	 
+    @media ( max-width: $tablet + px ) {
+        height: 80px;
+        justify-content: space-between;
+        padding: 0 20px;
+	}
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+    	padding: 0 10px;
+    }
+	 
+	.o-logo {
+        @media ( max-width: $tablet + px ) {
+    	    width: 140px;
+        }
+    }
 }

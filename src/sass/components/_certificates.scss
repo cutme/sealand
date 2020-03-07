@@ -3,12 +3,16 @@
    &__list {
        li {
            @extend %flex;
-
+           padding: 40px 0;
+            
            &:not(:last-child) {
                border-bottom: 1px solid $c-gray-01;
            }
            
-           padding: 40px 0;
+           @media ( max-width: $smartphone + px ) {
+           	   flex-direction: column;
+           	   text-align: center;
+           }
            
            &:first-child {
                padding-top: 0;
@@ -16,7 +20,18 @@
        }
        
        .icon {
-           width: 210px;
+           
+            @media ( min-width: $smartphone + px ) {
+               width: 210px;
+            }
+           
+            @media ( max-width: $smartphone + px ) {
+                margin-bottom: 30px;
+                
+                img {
+                    margin: 0 auto;
+                }
+            }
        }
        
        .description {

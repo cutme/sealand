@@ -12,11 +12,23 @@
     [class^="icon-"] {
         font-size: rem(60);
         color: $c-primary;
+        
+        @media ( max-width: $tablet + px ) {
+        	font-size: tablet(60);
+        }
     }
     
     dt {
         width: 105px;
         padding-left: 10px;
+        
+        @media ( max-width: $tablet + px ) {
+        	width: tablet(105);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: none;
+        }
     }
     
     dd {
@@ -33,7 +45,14 @@
     
     .name {
         font-size: rem(24);
+        
+        @media ( max-width: $tablet + px ) {
+        	font-size: tablet(24);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            font-size: rem(20);
+        	
+        }
     }
-    
-    
 }

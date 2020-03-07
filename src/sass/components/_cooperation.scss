@@ -1,7 +1,7 @@
 .c-cooperation {
     
     &__drivers {
-        padding: 0 40px 40px 40px;
+        
 
         .o-section {
             padding-bottom: 0;
@@ -48,6 +48,10 @@
             size: 1910px 80px;
         }
         
+        @media ( max-width: $smartphone + px ) {
+        	display: none;
+        }
+        
         ul {
             @extend %flex;
             margin: 0 0 0 auto;
@@ -63,6 +67,22 @@
             flex-direction: column;
             justify-content: flex-end;
             height: 100%;
+        }
+    }
+    
+    .o-cols {
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: block;
+        }
+        
+        &__item {
+            @media ( max-width: $tablet_portrait + px ) {
+            	width: 100%;
+            	
+            	&:first-of-type {
+                	margin-bottom: 40px;
+            	}
+            }
         }
     }
 }

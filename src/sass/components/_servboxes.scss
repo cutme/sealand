@@ -1,105 +1,44 @@
 .c-servboxes {
-    
-    .o-box {
-        @extend %rel;
-        display: block;
-        width: 100%;
-        height: 100%;
         
-        &__title {
-            @extend %abs;
-            @extend %flex;
-            left: 0; top: 0;
-            width: 100%;
-            padding: 40px;
-            color: white;
-        }
-        
-        [class^="icon-"] {
-            margin-right: 15px;
-            line-height: 1;
-            font-size: rem(60);
-        }
-        
-        &:after {
-            @extend %abs-pseudo;
-            @extend %anim;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            z-index: -1;
-            background-blend-mode: luminosity;
-            opacity: 0;
-        }
-        
-        &:hover {
-            &:after {
-                opacity: 1;
-            }
-        }
-        
-        img {
-            @extend %rel; z-index: -1;
+    img {
+        @media ( max-width: $smartphone + px ) {
+        	width: 100%;
         }
     }
-    
+        
     .o-cols {
         @extend %flex-spacebetween;
         
+        @media ( max-width: $smartphone + px ) {
+        	flex-wrap: wrap;
+        	width: calc(100% + 20px);
+        	margin: 0 -10px;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            width: calc(100% + 10px);
+            margin: 0 -5px;
+        }
+        
         &__item {
             width: grid(295);
+            
+            @media ( max-width: $smartphone + px ) {
+                width: 50%;
+                margin-bottom: 20px;
+                padding: 0 10px;
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                padding: 0 5px;
+                margin-bottom: 10px;
+            }
             
             .o-box {
                 &:after {
                     background-color: $c-primary;
                 }
             }
-            
-/*
-        
-                .o-box {
-                    &:after {
-                        background: var(--background), 
-                                    linear-gradient(to bottom, rgba(255,123,0,1) 0%, rgba(45,45,45,1) 100%);
-                    }
-                }
-                
-            &:nth-of-type(1) {
-                .o-box {
-                    &:after {
-                        background: url(../img/services/chemical-transport.jpg), 
-                        linear-gradient(to bottom, rgba(255,123,0,1) 0%, rgba(45,45,45,1) 100%);
-                    }
-                }
-            }
-            
-            &:nth-of-type(2) {
-                .o-box {
-                    &:after {
-                        background: url(../img/services/food-transport.jpg), 
-                        linear-gradient(to bottom, rgba(255,123,0,1) 0%, rgba(45,45,45,1) 100%);
-                    }
-                }
-            }
-            
-            &:nth-of-type(3) {
-                .o-box {
-                    &:after {
-                        background: url(../img/services/iso-containers.jpg), 
-                        linear-gradient(to bottom, rgba(255,123,0,1) 0%, rgba(45,45,45,1) 100%);
-                    }
-                }
-            }
-            
-            &:nth-of-type(4) {
-                .o-box {
-                    &:after {
-                        background: url(../img/services/flexi.jpg), 
-                        linear-gradient(to bottom, rgba(255,123,0,1) 0%, rgba(45,45,45,1) 100%);
-                    }
-                }
-            }
-*/
         }
     }
-
 }

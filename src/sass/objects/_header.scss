@@ -9,5 +9,9 @@
             position: center bottom;
         }
         margin-bottom: 60px;
+        
+        @media ( max-width: $base + px ) {
+        	margin-bottom: base(60);
+        }
     }
 }

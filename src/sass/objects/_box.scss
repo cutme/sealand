@@ -1,0 +1,80 @@
+.o-box {
+    @extend %rel;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    &__title {
+        @extend %abs;
+        @extend %flex;
+        left: 0; top: 0;
+        width: 100%;
+        padding: 40px;
+        color: white;
+        
+        @media ( max-width: $base + px ) {
+            padding: base(40);
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	padding: 20px;
+        	flex-direction: column;
+        	text-align: center;
+        }
+    }
+    
+    [class^="icon-"] {
+        margin-right: 15px;
+        line-height: 1;
+        font-size: rem(60);
+        
+        @media ( max-width: $base + px ) {
+        	font-size: base(60);
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+            margin: 0 0 5px 0;
+            font-size: smartphone(60);
+        }
+    }
+    
+    &:after {
+        @extend %abs-pseudo;
+        @extend %anim;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background-blend-mode: luminosity;
+        opacity: 0;
+    }
+    
+    &:hover {
+        &:after {
+            opacity: 1;
+        }
+    }
+    
+    img {
+        @extend %rel; z-index: -1;
+    }
+    
+    .o-lead { 
+        &--3 {
+            
+            @media ( max-width: $tablet + px ) {
+                font-size: base(24);
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: smartphone(24);
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	//font-size: smartphone(48);
+            }
+        }
+    }
+}

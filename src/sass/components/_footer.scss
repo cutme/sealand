@@ -5,7 +5,15 @@
         size: cover;
         color: $c-black-01;
     }
-    padding: 80px 0 120px;
+    padding: 80px 0 120px 0;
+    
+    @media ( max-width: $base + px ) {
+    	padding: base(80) 0 base(120) 0;
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	padding: 50px 0;
+    }
     
     p {
         line-height: 25px;
@@ -16,26 +24,75 @@
     &__address {
         @extend %flex;
         
+        @media ( max-width: $smartphone + px ) {
+            display: block;
+            width: 100%;
+            margin: 0 auto 30px auto;
+        }
+        
         [class^="icon-"] {
-            margin-right: 20px;
+            
             font-size: rem(40);
             color: $c-primary;
+            
+            @media ( min-width: $smartphone + 1px ) {
+                margin-right: 20px;
+            }
         }
     }
     
     .o-cols {
-        
+        @media ( max-width: $tablet + px ) {
+            flex-wrap: wrap;
+        }
+
         &__item {
             width: calc(100% / 4);
+            
+            @media ( max-width: $tablet + px ) {
+            	width: 33%;
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                width: 50%;
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+                width: 100%;
+                text-align: center;
+            }
+
+            &:first-of-type {
+                
+                @media ( max-width: $tablet + px ) {
+                	width: 100%;
+                	margin-bottom: 40px;
+                }
+            }
         
             &:last-of-type {
-               text-align: right;
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    text-align: right;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    padding-top: 40px;
+                }
+                
+                @media ( max-width: $smartphone + px ) {
+                    padding-top: 20px;
+                    text-align: center;
+                }
             }
         }
     }
     
     .o-logo {
         width: 145px; height: 45px;
+        
+        @media ( max-width: $smartphone + px ) {
+            margin: 0 auto;
+        }
     }
     
     a {

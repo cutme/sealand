@@ -6,6 +6,10 @@
         @extend %lead--2;
         margin-bottom: 1.5em;
         color: $c-black-02;
+        
+        @media ( max-width: $tablet + px ) {
+        	font-size: rem(20);
+        }
     }
     
     h4 {
@@ -24,6 +28,14 @@
             margin-bottom: 20px;
             padding-bottom: 20px;
             
+            @media ( max-width: $tablet + px ) {
+            	padding-left: tablet(105);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	padding-left: 60px;
+            }
+            
             &:not(:last-child) {
                 border-bottom: 1px solid $c-gray-01;
             }
@@ -40,6 +52,11 @@
                 }
                 color: $c-primary;
                 content: "\e901";
+                
+                @media ( max-width: $tablet + px ) {
+                	width: tablet(105);
+                	font-size: rem(30);
+                }                
             }
             
             &:hover {
@@ -62,6 +79,10 @@
         p {
             @extend %lead;
             @extend %lead--2;
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	font-size: rem(20);
+            }
         }
     }
 }

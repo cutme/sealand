@@ -1,3 +1,9 @@
 .o-section {
     padding: 70px 0;
+    
+    @media ( max-width: $base + px ) {
+    	padding: base(70) 0;
+    }
+    
+    
 }

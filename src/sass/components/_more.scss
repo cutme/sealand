@@ -1,14 +1,33 @@
 .c-more {
-    .o-cols {
+    .o-cols {        
+        
         &__item {
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                text-align: center;
+            }
+            
             &:first-of-type {
                 padding: 0;
+                
+                @media ( max-width: $smartphone_portrait + px ) {
+                    margin-bottom: 30px;
+                }
             }
 
             &:last-of-type {
-                padding-right: grid(105);
-                text-align: right;
+                
+                @media ( min-width: $smartphone_portrait + 1px ) {
+                    padding-right: grid(105);
+                    text-align: right;
+                }
             }
+            
+            
         }
+    }
+    
+    .o-btn {
+        
     }
 }

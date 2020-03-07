@@ -4,28 +4,55 @@
 	
 	 &--2 {
         @extend %flex-spacebetween;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	display: block;
+        }
     	 
         .o-cols {
             &__item {
-                width: grid(610);
+                
+                @media ( min-width: $smartphone_portrait + 1px ) {
+                    width: grid(610);
+                    
+                    &:first-of-type {
+                        padding-right: grid(105);
+                    }
+                }
                 
                 &:first-of-type {
-                    padding-right: grid(105);
+                    @media ( max-width: $smartphone_portrait + px ) {
+                        margin-bottom: 40px;
+                    }
                 }
             }
         }
     }
     
     &--2f {
-        .o-cols {
+        
+        @media ( max-width: $smartphone + px ) {
+            display: block;
+        }
+        
+        .o-cols {            
             &__item {
-                &:first-of-type {
-                    width: grid(505);
-                    padding-right: grid(105);
+                    
+                @media ( min-width: $smartphone + 1px ) {
+                    &:first-of-type {
+                        width: grid(505);
+                        padding-right: grid(105);
+                    }
+                    
+                    &:last-of-type {
+                        flex: 1;
+                    }
                 }
                 
-                &:last-of-type {
-                    flex: 1;
+                &:first-of-type {
+                    @media ( max-width: $smartphone + px ) {
+                    	margin-bottom: 40px;
+                    }
                 }
             }
         }
@@ -38,6 +65,10 @@
         .o-cols {
             &__item {
                 width: calc( (100% / 3) - 20px );
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	width: calc( (100% / 2) - 20px );
+                }
             }
         }
     }
@@ -48,10 +79,19 @@
                 padding: 20px 0;
                 border-bottom: 1px solid $c-gray-01;
                 
-                &:nth-last-child(1),
-                &:nth-last-child(2),
-                &:nth-last-child(3) {
-                    border: none;
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    &:nth-last-child(1),
+                    &:nth-last-child(2),
+                    &:nth-last-child(3) {
+                        border: none;
+                    }
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	&:nth-last-child(1),
+                    &:nth-last-child(2) {
+                        border: none;
+                    }
                 }
             }
         }

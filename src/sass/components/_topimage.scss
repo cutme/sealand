@@ -6,6 +6,15 @@
         position: center;
     }
     padding-top: 120px;
+    
+    @media ( max-width: $tablet + px ) {
+    	height: 400px;
+    	padding-top: 80px;
+    }
+    
+     @media ( max-width: $smartphone + px ) {
+    	height: 300px;
+    }
 
     .o-wrap {
         @extend %abs;
