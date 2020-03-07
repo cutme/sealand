@@ -68,7 +68,8 @@ module.exports = {
             loaders.images,
             loaders.js,
             loaders.ejs,
-            loaders.mov
+            loaders.mov,
+            loaders.mp4
 		]
     },
 

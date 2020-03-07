@@ -1,9 +1,10 @@
 .c-homevideo {
     @extend %rel;
+    overflow: hidden;
     height: 100vh;
     overflow: hidden;
     background: {
-        image: url(../img/top/home.jpg);
+//        image: url(../img/top/home.jpg);
         size: cover;
         position: center;
     }
@@ -17,7 +18,11 @@
     }
     
     &__video {
-        width: 100%; height: auto;
+        @extend %abs;
+        @extend %abs-x; z-index: 0;
+        height: 100%;
+        width: auto;
+//        width: 100%; height: auto;
     }
     
     .o-wrap {
@@ -30,7 +35,7 @@
     
     .icon-arrow-down {
         @extend %abs;
-        @extend %abs-x;
+        @extend %abs-x; 
         bottom: 40px;
         line-height: 1;
         font-size: rem(50);

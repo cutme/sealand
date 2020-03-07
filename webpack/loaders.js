@@ -117,7 +117,20 @@ const mov = {
 			}
         }
 	]
-}
+};
+
+const mp4 = {
+	test: /\.mp4$/,
+	use: [
+	    {
+		    loader: 'file-loader',
+			options: {
+			    name: '[name].[ext]',
+			    useRelativePath: true
+			}
+        }
+	]
+};
 
 module.exports = {
     ejs: ejs,
@@ -126,6 +139,7 @@ module.exports = {
     js: js,
     css: css,
     scss: scss,
-    mov: mov
+    mov: mov,
+    mp4: mp4
 };
 
