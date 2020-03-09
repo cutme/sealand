@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded',function() {
         
         // Home video
         
-        document.getElementById('video') ? window.homeVideo() : false; 
+        //document.getElementById('video') ? window.homeVideo() : false; 
         
         
          // Blazy
