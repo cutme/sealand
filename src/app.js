@@ -11,6 +11,8 @@ require('./js/map.js');
 require('./js/nav.js');
 //require('./js/splitting.js');
 require('./js/homevideo.js');
+require('./js/background-video.js');
+
 
 //
 //require('./js/mobile-detach.js');

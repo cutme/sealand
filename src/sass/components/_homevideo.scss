@@ -17,6 +17,12 @@
         opacity: .4;
     }
     
+    &__item {
+        @extend %abs; z-index: -1;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+    }
+    
     &__video {
         @extend %abs;
         @extend %abs-x; z-index: 0;
@@ -41,4 +47,8 @@
         font-size: rem(50);
         color: $c-gray-02;
     }
+}
+
+.flexible {
+    height: 100%;
 }

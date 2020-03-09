@@ -43,6 +43,7 @@
         "@glidejs/glide": "^3.4.1",
         "@pluginjs/scroll-progress": "^0.7.18",
         "autoprefixer": "^9.5.0",
+        "background-video": "^2.0.1",
         "blazy": "^1.8.2",
         "cssnano": "^4.1.10",
         "custom-select": "^1.1.15",
