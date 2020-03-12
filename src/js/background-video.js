@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded',function() {
             }
             e.setAttribute("id", "BackgroundVideo-" + this.videoCounter++);
             e.className = "flexible";
+            e.muted = true;
             e.preload = "none";
             e.loop = false;
             e.muted = true;
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded',function() {
                     source.src = base + "." + formats[i];
                     source.type = "video/" + formats[i];
                     e.appendChild(source);
+                    console.log(e.classList);
                 }
             }
         },
@@ -113,12 +115,23 @@ document.addEventListener('DOMContentLoaded',function() {
             }
         },
         playNextItem: function () {
+            
             var prevItem = this.currentItem;
             this.currentItem++;
             if (this.currentItem >= this.videos.length) {
                 this.currentItem = 0;
             }
             var item = this.videos[this.currentItem];
+/*
+            
+            document.addEventListener('mouseover', function() {
+                console.log('f');
+                item.play();
+                
+            });
+            
+*/
+            
             if (item.readyState == 4) { // 4 - HAVE_ENOUGH_DATA
                 item.play();
             } else {
@@ -171,29 +184,14 @@ document.addEventListener('DOMContentLoaded',function() {
     
     if (el) {
         const url = el.getAttribute('data-url');
+        
+        
+        const video = document.getElementById('video');
 
-        new BackgroundVideo({
-            /*
-             * container [optional]: id of the element, where to add video background. 
-             * If ommited, video background is added to the BODY element.
-             * Example:
-             * container: "myId",
-             */
+        video.addEventListener('canplaythrough', (event) => {
             
-            /*
-             * video: list of video files
-             * 
-             * Note: If you have one video in different formats (mp4, webm, ogv, etc)
-             * you can add them all to ensure browser compatibility.
-             * Use 'formats' option to list all additional formats.
-             */
-            container: "video",
-            video: [
-                {
-                    file: url
-                }
-            ]
-            
+            video.play();
+            console.log('I think I can play through the entire.');
         });
         
        

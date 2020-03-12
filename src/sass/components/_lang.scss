@@ -1,0 +1,99 @@
+.c-lang {
+    
+    @extend %flex;
+    @extend %flex-y;
+    @extend %rel;
+    margin-left: 25px;
+    padding-right: 30px;
+    text-transform: uppercase;
+    font: {
+        family: $gomme;
+        size: rem(16);
+    }
+    color: white;
+    cursor: pointer;
+    
+    @media ( min-width: $tablet + 1px ) {
+    	margin-left: 40px;
+    }
+    
+    &__current {
+        @extend %rel;
+        padding-left: 35px;    
+            
+        &:before {
+            @extend %abs-pseudo;
+
+            left: 0; top: -4px;
+            font: {
+                family: $icomoon;
+                size: rem(24);
+            }
+            content: "\e906";
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	display: none;
+        }
+    }
+    
+    a {
+        
+        
+        &:hover {
+            .desktop & {
+                color: $c-primary;
+            }
+        }
+    }
+    
+    ul {
+        
+        @media ( min-width: $tablet + 1px ) {
+            position: absolute;
+            left: 0; top: 100%;
+            width: 100%;
+            background-color: $c-black-01;
+            padding: 5px 0 15px 34px;
+
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            transform-origin: 50% 0;
+            transform: scale(0.75) translateY(-21px);
+            transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+            display: flex;
+        }
+        
+        li {
+            &:not(:last-child) {
+                &:after {
+                    @media ( max-width: $tablet + px ) {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        content: ' / ';
+                    }
+                }
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	font-size: rem(14);
+            }
+        }
+    }
+    
+    &:hover {
+        .desktop & {
+            @media ( min-width: $tablet + 1px ) {
+                ul {
+                    opacity: 1;
+                    pointer-events: auto;
+                    transform: scale(1) translateY(0);
+                }
+            }
+        }
+    }
+}

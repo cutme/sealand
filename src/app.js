@@ -6,6 +6,7 @@ require('./js/helpers.js');
 require('./js/ismobile.js');
 require('./js/inview.js');
 require('./js/fixel.js');
+require('./js/glightbox.js');
 require('./js/gototarget.js');
 require('./js/map.js');
 require('./js/nav.js');
